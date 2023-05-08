@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedido Especial</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-image: url("iu.webp"); 
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #nao {
+            position: absolute;
+            transition: left 0.3s, top 0.3s;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pedido feito especialmente para a Estelar_Art</h1>
+
+    <img id="fofo" src="zoio.jpeg" alt="Imagem Fofa">
+    <img src="iu.webp" style="position: absolute; top: 430px; left: 670px;">
+    <img src="gatinnn.png" style="position: absolute; top: 200px; left: 20px;">
+    <img src="gatinnn.png" style="position: absolute; top: 200px; left: 1320px;">
+    <img src="gati.jpg" style="position: absolute; top:350px; left: 670px;">
+   
+
+    
+
+
+    <p>OIIII MEU AMOR,SOY JO NOVAMENTE EU SÓ GOSTARIA DE CONFIRMAR MAIS UMA VEZ SE VC ACEITA EUZINHO AKI.</Nav></p>
+    <p>DUVIDO VC CLICAR NO (NÃO), se conseguir eu lhe dou 100 conto no pix</p>
+    <button onclick="respostaSim()">Sim</button>
+    <span id="nao" onmouseover="moverNao()">Não</span>
+    
+
+    <script>
+        var nao = document.getElementById("nao");
+        var larguraJanela = window.innerWidth - nao.offsetWidth;
+        var alturaJanela = window.innerHeight - nao.offsetHeight;
+        var movimentoInterval;
+
+        function respostaSim() {
+            alert("Eu saberia que vc aceitaria hehe,meu plano é infalivel! Eu te amo muitoo meu amor, obrigado por vc realmente ter aceitado seguir uma vida junto cmggg,lhe amo demaizi!");
+        }
+
+        function moverNao() {
+            if (movimentoInterval) {
+                clearInterval(movimentoInterval);
+            }
+            var novaPosicaoX = Math.random() * larguraJanela;
+            var novaPosicaoY = Math.random() * alturaJanela;
+            nao.style.left = novaPosicaoX + "px";
+            nao.style.top = novaPosicaoY + "px";
+            movimentoInterval = setInterval(function() {
+                novaPosicaoX = Math.random() * larguraJanela;
+                novaPosicaoY = Math.random() * alturaJanela;
+                nao.style.left = novaPosicaoX + "px";
+                nao.style.top = novaPosicaoY + "px";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
